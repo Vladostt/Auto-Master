@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoMaster — Автосервис</title>
+    <meta name="description"
+        content="Профессиональный ремонт авто, диагностика, шиномонтаж в Москве. Запишитесь на СТО прямо сейчас!">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Подключаем карту (Яндекс.Карты) -->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш_ключ&lang=ru_RU" type="text/javascript"></script>
+</head>
+
+<body>
+    <!-- Шапка с навигацией -->
+    <header class="header">
+        <div class="header__container container">
+            <a href="#" class="header__logo">Auto<span class="header__logo-accent">Master</span></a>
+            <nav class="header__nav">
+                <ul class="header__menu">
+                    <li class="header__menu-item"><a href="#services" class="header__link">Услуги</a></li>
+                    <li class="header__menu-item"><a href="#about" class="header__link">О нас</a></li>
+                    <li class="header__menu-item"><a href="#contacts" class="header__link">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="header__burger" id="burger">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Главный блок (Hero) -->
+    <main>
+        <section class="hero" id="home">
+            <div class="hero__container container">
+                <div class="hero__content">
+                    <h1 class="hero__title">Ремонт автомобилей с гарантией</h1>
+                    <p class="hero__subtitle">Диагностика, шиномонтаж, замена масла и любые виды ремонта за 1 день</p>
+                    <a href="#contact-form" class="hero__btn">Записаться на СТО</a>
+                </div>
+                <div class="hero__image">
+                    <!-- Просто декоративный блок, можно заменить на картинку -->
+                    <div class="hero__img-placeholder"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Услуги (Grid) -->
+        <section class="services" id="services">
+            <div class="container">
+                <h2 class="section-title">Наши услуги</h2>
+                <div class="services__grid">
+                    <div class="service-card">
+                        <div class="service-card__icon">🔧</div>
+                        <h3 class="service-card__title">Диагностика</h3>
+                        <p class="service-card__desc">Компьютерная проверка всех систем авто</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-card__icon">🛞</div>
+                        <h3 class="service-card__title">Шиномонтаж</h3>
+                        <p class="service-card__desc">Балансировка, ремонт покрышек, сезонная смена</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-card__icon">⚙️</div>
+                        <h3 class="service-card__title">Замена масла</h3>
+                        <p class="service-card__desc">Моторное и трансмиссионное масло премиум-класса</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-card__icon">🛠️</div>
+                        <h3 class="service-card__title">Ремонт ходовой</h3>
+                        <p class="service-card__desc">Замена амортизаторов, рычагов, сайлентблоков</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- О нас -->
+        <section class="about" id="about">
+            <div class="container">
+                <h2 class="section-title">Почему мы?</h2>
+                <div class="about__flex">
+                    <div class="about__item">
+                        <span class="about__number">10+</span>
+                        <p>лет опыта в автосервисе</p>
+                    </div>
+                    <div class="about__item">
+                        <span class="about__number">100%</span>
+                        <p>гарантия на все виды работ</p>
+                    </div>
+                    <div class="about__item">
+                        <span class="about__number">24/7</span>
+                        <p>работаем без выходных</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Контакты + Форма + Карта (Flex) -->
+        <section class="contacts" id="contacts">
+            <div class="container">
+                <h2 class="section-title">Контакты</h2>
+                <div class="contacts__wrapper">
+                    <!-- Форма обратной связи (левая часть) -->
+                    <div class="contacts__form-block">
+                        <h3 class="contacts__form-title">Оставить заявку</h3>
+                        <form id="contact-form" class="form">
+                            <input type="text" id="name" class="form__input" placeholder="Ваше имя" required>
+                            <input type="tel" id="phone" class="form__input" placeholder="Номер телефона" required>
+                            <textarea id="message" class="form__textarea" placeholder="Опишите проблему..."></textarea>
+                            <button type="submit" class="form__btn">Отправить</button>
+                            <div id="form-status" class="form__status"></div>
+                        </form>
+                    </div>
+                    <!-- Карта (правая часть) -->
+                    <div class="contacts__map-block">
+                        <h3 class="contacts__map-title">Мы находимся здесь</h3>
+                        <div id="map" class="contacts__map"></div>
+                        <p class="contacts__address">г. Москва, ул. Автомастеров, д. 15</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__copy">© 2026 AutoMaster — Все права защищены</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
